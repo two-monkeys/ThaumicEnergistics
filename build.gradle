@@ -27,6 +27,7 @@ minecraft {
 }
 
 dependencies {
+    compile "appeng:appliedenergistics2:rv2-beta-32:dev"
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
     //compile "some.group:artifact:version:classifier"
