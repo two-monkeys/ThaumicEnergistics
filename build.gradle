@@ -37,6 +37,7 @@ repositories {
 dependencies {
     compile "appeng:appliedenergistics2:rv2-beta-32:dev"
     compile "Thaumcraft:Thaumcraft:1.7.10-4.2.3.5:dev"
+    compile "codechicken:NotEnoughItems:1.7.10-1.0.4.106:dev"
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
     //compile "some.group:artifact:version:classifier"
