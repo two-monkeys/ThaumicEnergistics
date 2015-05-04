@@ -23,7 +23,7 @@ group= "thaumicenergistics" // http://maven.apache.org/guides/mini/guide-naming-
 archivesBaseName = "thaumicenergistics"
 
 minecraft {
-    version = "1.7.10-10.13.3.1395-1710ls"
+    version = "${minecraft_version}-${forge_version}"
     runDir = "eclipse/assets"
 }
 
@@ -38,33 +38,33 @@ repositories {
     }
     ivy {
         name = 'thaumcraft'
-        artifactPattern 'https://dl.dropboxusercontent.com/u/47135879/[module](-[classifier])-1.7.10-[revision](.[ext])'
+        artifactPattern 'https://dl.dropboxusercontent.com/u/47135879/[module](-[classifier])-[revision](.[ext])'
     }
 }
 
 dependencies {
-    compile "appeng:appliedenergistics2:rv2-stable-1:dev@jar"
-    compile "Azanor:Thaumcraft:4.2.3.5:deobf@jar"
-    compile "codechicken:NotEnoughItems:1.7.10-1.0.4.106:dev"
-    compile "mcp.mobius.waila:Waila:1.5.10_1.7.10"
+    compile "appeng:appliedenergistics2:${ae2_version}:dev@jar"
+    compile "Azanor:Thaumcraft:${minecraft_version}-${thaumcraft_version}:deobf@jar"
+    compile "codechicken:NotEnoughItems:${minecraft_version}-${nei_version}:dev"
+    compile "mcp.mobius.waila:Waila:${waila_version}_${minecraft_version}"
 }
 
 processResources
-        {
-            // this will ensure that this task is redone when the versions change.
-            inputs.property "version", project.version
-            inputs.property "mcversion", project.minecraft.version
+{
+    // this will ensure that this task is redone when the versions change.
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
 
-            // replace stuff in mcmod.info, nothing else
-            from(sourceSets.main.resources.srcDirs) {
-                include 'mcmod.info'
+    // replace stuff in mcmod.info, nothing else
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
 
-                // replace version and mcversion
-                expand 'version':project.version, 'mcversion':project.minecraft.version
-            }
+        // replace version and mcversion
+        expand 'version':project.version, 'mcversion':project.minecraft.version
+    }
 
-            // copy everything else, thats not the mcmod.info
-            from(sourceSets.main.resources.srcDirs) {
-                exclude 'mcmod.info'
-            }
-        }
+    // copy everything else, thats not the mcmod.info
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}
