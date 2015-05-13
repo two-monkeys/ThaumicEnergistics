@@ -47,6 +47,13 @@ dependencies {
     compile "Azanor:Thaumcraft:${minecraft_version}-${thaumcraft_version}:deobf@jar"
     compile "codechicken:NotEnoughItems:${minecraft_version}-${nei_version}:dev"
     compile "mcp.mobius.waila:Waila:${waila_version}_${minecraft_version}"
+
+    testCompile "org.powermock:powermock-module-junit4-rule:${powermock_version}"
+    testCompile "powermock-classloading-xstream:${powermock_version}"
+    testCompile "junit:junit:${junit_version}"
+    testCompile "org.easymock:easymock:${easymock_version}"
+    testCompile "org.powermock:powermock-module-junit:${powermock_version}"
+    testCompile "org.powermock:powermock-api-easymock:${powermock_version}"
 }
 
 processResources
