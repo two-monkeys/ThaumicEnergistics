@@ -124,8 +124,8 @@ public class RecipeRegistry
 		kCoreAspects.add( Aspect.EARTH, 1 );
 
 		RecipeRegistry.ITEM_KNOWLEDGE_CORE = ThaumcraftApi.addArcaneCraftingRecipe( ResearchRegistry.ResearchTypes.KNOWLEDGEINSCRIBER.getKey(),
-			KnowledgeCore, kCoreAspects, new Object[] { "VLV", "LZL", "VCV", 'V', VibrantGlass, 'L', Lapis, 'Z', ZombieBrain, 'C',
-							CalculationProcessor } );
+			KnowledgeCore, kCoreAspects, "VLV", "LZL", "VCV", 'V', VibrantGlass, 'L', Lapis, 'Z', ZombieBrain, 'C',
+							CalculationProcessor );
 
 		// Knowledge Inscriber
 		AspectList kiAspects = new AspectList();
@@ -137,8 +137,8 @@ public class RecipeRegistry
 		kiAspects.add( Aspect.AIR, 5 );
 
 		RecipeRegistry.BLOCK_KNOWLEDGE_INSCRIBER = ThaumcraftApi.addArcaneCraftingRecipe( ResearchRegistry.ResearchTypes.KNOWLEDGEINSCRIBER.getKey(),
-			KnowledgeInscriber, kiAspects, new Object[] { "IPI", " T ", "ILI", 'I', IronIngot, 'P', IlluminatedPanel, 'T', Thaumonomicon, 'L',
-							LogicProcessor } );
+			KnowledgeInscriber, kiAspects, "IPI", " T ", "ILI", 'I', IronIngot, 'P', IlluminatedPanel, 'T', Thaumonomicon, 'L',
+							LogicProcessor );
 
 		// Arcane Assembler
 		AspectList assemblerAspects = new AspectList();
@@ -203,7 +203,7 @@ public class RecipeRegistry
 		storage1kAspects.add( Aspect.FIRE, 3 );
 		storage1kAspects.add( Aspect.ORDER, 1 );
 		RecipeRegistry.STORAGE_COMPONENT_1K = ThaumcraftApi.addArcaneCraftingRecipe( ResearchTypes.STORAGE.getKey(), EssentiaComp_1k,
-			storage1kAspects, new Object[] { "EQ ", "QPQ", " QE", 'E', EtheralEssence, 'Q', CertusQuartz, 'P', LogicProcessor } );
+			storage1kAspects, "EQ ", "QPQ", " QE", 'E', EtheralEssence, 'Q', CertusQuartz, 'P', LogicProcessor );
 		RecipeRegistry.replaceRecipeIngredientWithGroup( (ShapedArcaneRecipe)RecipeRegistry.STORAGE_COMPONENT_1K, CertusQuartz, GroupQuartz );
 
 		// 4K Storage Component
@@ -211,16 +211,16 @@ public class RecipeRegistry
 		storage4kAspects.add( Aspect.FIRE, 3 );
 		storage4kAspects.add( Aspect.ORDER, 2 );
 		RecipeRegistry.STORAGE_COMPONENT_4K = ThaumcraftApi.addArcaneCraftingRecipe( ResearchTypes.STORAGE.getKey(), EssentiaComp_4k,
-			storage4kAspects, new Object[] { "EPE", "1G1", "E1E", 'E', EtheralEssence, '1', EssentiaComp_1k, 'P', CalculationProcessor, 'G',
-							QuartzGlass } );
+			storage4kAspects, "EPE", "1G1", "E1E", 'E', EtheralEssence, '1', EssentiaComp_1k, 'P', CalculationProcessor, 'G',
+							QuartzGlass );
 
 		// 16K Storage Component
 		AspectList storage16kAspects = new AspectList();
 		storage16kAspects.add( Aspect.FIRE, 3 );
 		storage16kAspects.add( Aspect.ORDER, 4 );
 		RecipeRegistry.STORAGE_COMPONENT_16K = ThaumcraftApi.addArcaneCraftingRecipe( ResearchTypes.STORAGE.getKey(), EssentiaComp_16k,
-			storage16kAspects, new Object[] { "SPE", "4G4", "E4S", 'E', EtheralEssence, 'S', SalisMundus, '4', EssentiaComp_4k, 'P',
-							EngineeringProcessor, 'G', QuartzGlass } );
+			storage16kAspects, "SPE", "4G4", "E4S", 'E', EtheralEssence, 'S', SalisMundus, '4', EssentiaComp_4k, 'P',
+							EngineeringProcessor, 'G', QuartzGlass );
 
 		// 16K Storage Component
 		AspectList storage64kAspects = new AspectList();
